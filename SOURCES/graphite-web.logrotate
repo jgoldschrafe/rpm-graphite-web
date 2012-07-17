@@ -1,0 +1,12 @@
+# !!!NOTE!!!
+# Graphite is not opinionated about how it is run. Please modify the postrotate
+# section to restart Graphite in a way that is appropriate for your system!
+/var/log/graphite/webapp/*.log {
+	missingok
+	notifempty
+	compress
+    sharedscripts
+    postrotate
+        # Restart command goes here
+    endscript
+}
