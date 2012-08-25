@@ -1,3 +1,4 @@
+%{!?pyver: %define pyver %(%{__python} -c "import sys ; print sys.version[:3]")}
 %if 0%{?rhel} < 6
 %define python_sitelib  %(%{__python} -c "from distutils.sysconfig import get_python_lib; import sys; sys.stdout.write(get_python_lib())")
 %define python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; import sys; sys.stdout.write(get_python_lib(1))")
